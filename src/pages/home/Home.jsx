@@ -1,10 +1,16 @@
-import React from 'react'
-import "./Home.scss"
-
+import React from "react";
+import "./Home.scss";
+import Hero from "../../components/hero/Hero";
+import TrustedBy from "../../components/trustedby/TrustedBy";
+import Slide from "../../components/slide/Slide";
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Hero />
+      <TrustedBy />
+      <Slide heading="Popular Services" />
+    </>
+  );
+};
 
-export default Home
+export default Home;
