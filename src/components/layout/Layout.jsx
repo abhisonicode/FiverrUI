@@ -25,7 +25,9 @@ const Layout = () => {
       }}
     >
       <Navbar />
-      <div className={isSearchFocused && isNavbarActive ? "bg-zinc-600" : ""}>
+      <div
+        className={`${isSearchFocused && isNavbarActive ? "bg-zinc-600" : ""}`}
+      >
         <Outlet />
       </div>
       <Footer />

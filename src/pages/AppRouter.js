@@ -10,6 +10,7 @@ import Messages from "./messages/Messages";
 import MyGigs from "./myGigs/MyGigs";
 import Orders from "./orders/Orders";
 import Register from "./register/Register";
+import Message from "./message/Message";
 
 const Add = lazy(() => import("./add/Add"));
 
@@ -48,6 +49,10 @@ const AppRouter = createBrowserRouter([
         element: <Messages></Messages>,
       },
       {
+        path: "/message/:id",
+        element: <Message></Message>,
+      },
+      {
         path: "/my-gigs",
         element: <MyGigs></MyGigs>,
       },
@@ -58,6 +63,11 @@ const AppRouter = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "*",
+        red
+        element: <Home></Home>,
       },
     ],
   },

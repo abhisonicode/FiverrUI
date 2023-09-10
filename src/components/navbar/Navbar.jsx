@@ -8,13 +8,13 @@ const Navbar = () => {
     useContext(ThemeContext);
 
   const { pathname } = useLocation();
-  const currentUser = null;
+  // const currentUser = null;
 
-  // const currentUser = {
-  //   id: 1,
-  //   username: "Abhishek Soni",
-  //   isSeller: true,
-  // };
+  const currentUser = {
+    id: 1,
+    username: "Abhishek Soni",
+    isSeller: true,
+  };
   const handleNavbar = () => {
     window.scrollY > 0 ? setNavbarActive(true) : setNavbarActive(false);
   };
@@ -102,7 +102,10 @@ const Navbar = () => {
                   {currentUser?.username}
                 </span>
                 {isAccountMenuOpen && (
-                  <div className="options flex flex-col bg-white font-normal text-base text-zinc-500 py-3 px-5 absolute top-10 right-0 border border-zinc-200	 rounded-lg w-[200px]">
+                  <div
+                    onClick={() => setISAccountMenuOpen(false)}
+                    className="options flex flex-col bg-white font-normal text-base text-zinc-500 py-3 px-5 absolute top-10 right-0 border border-zinc-200	 rounded-lg w-[200px]"
+                  >
                     {currentUser?.isSeller && (
                       <>
                         <Link to="/my-gigs" className="cursor-pointer">
