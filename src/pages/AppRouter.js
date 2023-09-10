@@ -66,7 +66,6 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: "*",
-        red
         element: <Home></Home>,
       },
     ],
